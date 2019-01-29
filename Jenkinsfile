@@ -13,7 +13,7 @@ node {
         // Tool name from Jenkins configuration
         rtMaven.tool = "maven"
         // Set Artifactory repositories for dependencies resolution and artifacts deployment.
-        rtMaven.deployer releaseRepo:'Jenkins-release', snapshotRepo:'Jenkins-snapshot', server: server
+        rtMaven.deployer releaseRepo:'Jenkins-integration', snapshotRepo:'Jenkins-snapshot', server: server
         //rtMaven.resolver releaseRepo:'Jenkins-release', snapshotRepo:'Jenkins-snapshot', server: server
     }
 
