@@ -21,6 +21,35 @@
         <jelastic.environment>wakaleo</jelastic.environment>
     </properties>
 
+    <!-- External Repository -->
+    <repositories>
+        <repository>
+            <id>remote-repos</id>
+            <url>http://localhost:8081/artifactory/remote-repos</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+ 
+    <!-- Plugin external Repository -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>http://localhost:8081/artifactory/libs-release</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>snapshots</id>
+            <url>http://localhost:8081/artifactory/libs-snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository
+    </pluginRepositories>
+
     <scm>
         <connection>scm:git:git@github.com:${github.account}/game-of-life.git</connection>
         <developerConnection>scm:git:git@github.com:${github.account}/game-of-life.git</developerConnection>
