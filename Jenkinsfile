@@ -14,7 +14,7 @@ node {
         rtMaven.tool = "maven"
         // Set Artifactory repositories for dependencies resolution and artifacts deployment.
         rtMaven.deployer releaseRepo:'Jenkins-integration', snapshotRepo:'Jenkins-snapshot', server: server
-        rtMaven.resolver releaseRepo:'Jenkins-integration', snapshotRepo:'Jenkins-snapshot', server: server
+        rtMaven.resolver releaseRepo:'libs-release', snapshotRepo:'libs-snapshot', server: server
     }
 
     stage('Maven build') {
