@@ -329,59 +329,7 @@
                         <artifactId>maven-site-plugin</artifactId>
                         <version>3.3</version>
                         <configuration>
-                            
-                        </configuration>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.wakaleo.gameoflife</groupId>
-                                <artifactId>gameoflife-build</artifactId>
-                                <version>${project.version}</version>
-                            </dependency>
-                        </dependencies>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>maven2</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-enforcer-plugin</artifactId>
-                        <version>1.0</version>
-                        <executions>
-                            <execution>
-                                <id>enforce-versions</id>
-                                <goals>
-                                    <goal>enforce</goal>
-                                </goals>
-                                <configuration>
-                                    <rules>
-                                        <requireMavenVersion>
-                                            <version>[2.0.9, 2.2.1]</version>
-                                        </requireMavenVersion>
-                                    </rules>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-site-plugin</artifactId>
-                        <version>2.1.1</version>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.wakaleo.gameoflife</groupId>
-                                <artifactId>gameoflife-build</artifactId>
-                                <version>${project.version}</version>
-                            </dependency>
-                        </dependencies>
-                    </plugin>
-                </plugins>
-            </build>
-            <reporting>
-            <reportPlugins>
+                            <reportPlugins>
                                 <plugin>
                                     <artifactId>maven-project-info-reports-plugin</artifactId>
                                     <version>2.7</version>
@@ -450,6 +398,57 @@
                                     <version>2.4</version>
                                 </plugin>
                             </reportPlugins>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.wakaleo.gameoflife</groupId>
+                                <artifactId>gameoflife-build</artifactId>
+                                <version>${project.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>maven2</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                        <version>1.0</version>
+                        <executions>
+                            <execution>
+                                <id>enforce-versions</id>
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
+                                <configuration>
+                                    <rules>
+                                        <requireMavenVersion>
+                                            <version>[2.0.9, 2.2.1]</version>
+                                        </requireMavenVersion>
+                                    </rules>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-site-plugin</artifactId>
+                        <version>2.1.1</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.wakaleo.gameoflife</groupId>
+                                <artifactId>gameoflife-build</artifactId>
+                                <version>${project.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+            <reporting>
                 <plugins>
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
