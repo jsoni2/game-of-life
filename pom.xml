@@ -47,7 +47,7 @@
             <releases>
                 <enabled>false</enabled>
             </releases>
-        </pluginRepository>
+        </pluginRepository
     </pluginRepositories>
 
     <scm>
